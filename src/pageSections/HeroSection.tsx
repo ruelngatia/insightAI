@@ -1,6 +1,4 @@
-import React from 'react'
-// import hero_video from '../assets/Video/video.mp4'
-
+const vd = require('../assets/Video/video.mp4')
 export default function HeroSection() {
   return (
     <div
@@ -9,8 +7,8 @@ export default function HeroSection() {
   >
     <div className="container">
       <div>
-        <video autoPlay muted loop>
-          <source src='../assets/Video/video.mp4' type="video/mp4"/>
+        <video autoPlay muted loop className="w-full h-full object-cover absolute top-0 left-0">
+          <source src={vd} type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
       </div>

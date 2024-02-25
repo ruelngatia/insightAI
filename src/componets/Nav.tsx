@@ -8,7 +8,13 @@ export default function Nav() {
   const location = useLocation();
   const navigator = useNavigate()
   
-  
+  const handleClickScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const handleToggle = () =>{
     setToggle(!toggle)
@@ -31,8 +37,8 @@ useEffect(() => {
     className={`absolute ud-header left-0 top-0 z-40 flex w-full items-center bg-transparent ${isScolled  ? 'sticky' : ''}` }>
     <div className="container">
       <div className="relative p-4 flex items-center justify-between">
-        <div className="">
-          <a href="index.html" className="block text-center header-logo" style={{padding: 0, margin: 0}}>
+        <div className="hover:cursor-pointer">
+          <a onClick={() => navigator("/")} className="block text-center header-logo" style={{padding: 0, margin: 0}}>
            <img src={logo} className="" width="200" alt=""/>
           </a>
         </div>
@@ -60,7 +66,7 @@ useEffect(() => {
               <ul className="blcok lg:flex 2xl:ml-20">
                 <li className="group relative">
                   <a
-                    href=''
+                    href='#'
                     onClick={() => navigator('/')}
                     className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium  group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
@@ -69,7 +75,7 @@ useEffect(() => {
                 </li>
                 <li className="group relative" id="isLoged">
                   <a
-                    href=""
+                    href="#"
                     onClick={() => navigator('/reports')}
                     className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium  group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
@@ -78,36 +84,36 @@ useEffect(() => {
                 </li>
                 <li className="group relative">
                   <a
-                    href=""
-                    onClick={() => navigator('/#about')}
-                    className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
+                    
+                    onClick={() => handleClickScroll('about')}
+                    className={`cursor-pointer ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
                     About
                   </a>
                 </li>
                 <li className="group relative">
                   <a
-                    href=""
-                    onClick={() => navigator('/#pricing')}
-                    className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
+                    
+                    onClick={() => handleClickScroll('pricing')}
+                    className={`cursor-pointer ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
                     Pricing
                   </a>
                 </li>
                 <li className="group relative">
                   <a
-                    href=""
-                    onClick={() => navigator('/#team')}
-                    className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
+                    
+                    onClick={() => handleClickScroll('team')}
+                    className={`cursor-pointer ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
                     Team
                   </a>
                 </li>
                 <li className="group relative">
                   <a
-                    href=""
-                    onClick={() => navigator('/#contact')}
-                    className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
+                    
+                    onClick={() => handleClickScroll('contact')}
+                    className={`cursor-pointer ud-menu-scroll mx-8 flex py-2 text-base font-medium group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 xl:ml-10 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
                     Contact
                   </a>
@@ -116,7 +122,7 @@ useEffect(() => {
             </nav>
           </div>
           <div className="flex items-center justify-end pr-16 lg:pr-0">
-            <label
+            {/* <label
             //   htmlFor="themeSwitcher"
               className="inline-flex cursor-pointer items-center"
               aria-label="themeSwitcher"
@@ -187,7 +193,7 @@ useEffect(() => {
                   </defs>
                 </svg>
               </span>
-            </label>
+            </label> */}
             <div className="hidden sm:flex">
               <span
                 onClick={() => navigator('/signin')}

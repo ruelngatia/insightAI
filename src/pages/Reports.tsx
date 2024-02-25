@@ -6,6 +6,8 @@ import { ReviewInterface } from "../models/ReviewInterface";
 import { ReportService } from "../services/ReportService";
 import { format } from "date-fns";
 import { CircularProgress, List, ListItem, ListItemText, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { LoginModel } from "../models/LoginModel";
 
 export default function Reports() {
   const [chartInfo, setChartInfo] = useState<ChartsMoldel>({
@@ -21,13 +23,17 @@ export default function Reports() {
     name_list: [],
   });
   const [loading, setLoading] = useState<boolean>(false);
+  const navigator = useNavigate();
 
   useEffect(() => {
+    const auth = window.localStorage.getItem('auth')
+    if(auth==null) return navigator('/singin')
+    const user: LoginModel = JSON.parse(auth);
     new ReportService()
-      .getChartData("Smart Watch")
+      .getChartData(user.user.company)
       .then((res) => setChartInfo(res))
       .then(() => {
-        new ReportService().getReviews("Smart Watch").then((res) => {
+        new ReportService().getReviews(user.user.company).then((res) => {
           setReviews(res);
           setLoading(true);
         });

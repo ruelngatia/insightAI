@@ -4,4 +4,5 @@ export interface signupModel {
   password: string;
   site: string;
   project: string;
+  company: string;
 }

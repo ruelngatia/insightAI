@@ -9,4 +9,5 @@ export interface UserModel {
   project: string;
   requests: number;
   __v: number;
+  company: string;
 }

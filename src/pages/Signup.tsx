@@ -19,6 +19,7 @@ export default function Signup() {
     project: "insighAI",
     site: location.pathname,
     username: "",
+    company: ''
   });
 
   const signup = () => {
@@ -74,6 +75,18 @@ export default function Signup() {
                         setForm({ ...form, email: event.target.value })
                       }
                       placeholder="Email"
+                      className="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"
+                    />
+                  </div>
+
+                  <div className="mb-[22px]">
+                    <input
+                      id="Company"
+                      type="text"
+                      onChange={(event) =>
+                        setForm({ ...form, company: event.target.value })
+                      }
+                      placeholder="Company name"
                       className="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"
                     />
                   </div>
