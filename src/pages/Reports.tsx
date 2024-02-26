@@ -27,7 +27,7 @@ export default function Reports() {
 
   useEffect(() => {
     const auth = window.localStorage.getItem('auth')
-    if(auth==null) return navigator('/singin')
+    if(auth==null) return navigator('/signin')
     const user: LoginModel = JSON.parse(auth);
     new ReportService()
       .getChartData(user.user.company)

@@ -1,7 +1,11 @@
 import React from "react";
 import faintGrid from "../assets/svg/faint-grid.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+
+  const navigator = useNavigate();
+
   return (
     <footer
       className="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]"
@@ -101,32 +105,32 @@ export default function Footer() {
               <ul>
                 <li>
                   <a
-                    href="index.html"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Home
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#features"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Features
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#about"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     About
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#testimonials"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Testimonial
                   </a>
@@ -150,28 +154,28 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="privacy.html"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/privacy')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Privacy policy
                   </a>
                 </li>
                 <li>
                   <a
-                    href="terms.html"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/terms')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Terms of Service
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="javascript:void(0)"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Refund policy
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -181,24 +185,24 @@ export default function Footer() {
               <ul>
                 <li>
                   <a
-                    href="privacy.html"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/privacy')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Privacy policy
                   </a>
                 </li>
                 <li>
                   <a
-                    href="use-notice.html"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/usenotice')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Use notice
                   </a>
                 </li>
                 <li>
                   <a
-                    href="terms.html"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => navigator('/terms')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Terms of service
                   </a>

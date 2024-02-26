@@ -66,18 +66,16 @@ useEffect(() => {
               <ul className="blcok lg:flex 2xl:ml-20">
                 <li className="group relative">
                   <a
-                    href='#'
                     onClick={() => navigator('/')}
-                    className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium  group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
+                    className={`cursor-pointer ud-menu-scroll mx-8 flex py-2 text-base font-medium  group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
                     Home
                   </a>
                 </li>
                 <li className="group relative" id="isLoged">
                   <a
-                    href="#"
                     onClick={() => navigator('/reports')}
-                    className={`ud-menu-scroll mx-8 flex py-2 text-base font-medium  group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
+                    className={`cursor-pointer ud-menu-scroll mx-8 flex py-2 text-base font-medium  group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:group-hover:opacity-70 ${location.pathname !== '/'? 'text-body-color ':'lg:text-white lg:group-hover:text-white'}`}
                   >
                     Reports
                   </a>
