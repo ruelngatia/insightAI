@@ -63,8 +63,8 @@ export default function PricingSection() {
               </h2>
               <p className="text-base text-body-color dark:text-dark-6">
                 Our pricing is as innovative as our job matching. Discover
-                packages that make finding the right job in digital twin
-                technology accessible and affordable.{" "}
+                packages that make finding the right job in digital InsightAI
+                 accessible and affordable.{" "}
               </p>
             </div>
           </div>

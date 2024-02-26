@@ -1,5 +1,10 @@
+import { useNavigate } from "react-router-dom"
+
 const vd = require('../assets/Video/video.mp4')
 export default function HeroSection() {
+
+  const navigator = useNavigate()
+
   return (
     <div
     id="home"
@@ -34,7 +39,7 @@ export default function HeroSection() {
             >
               <li>
                 <a
-                  href="signup.html"
+                  onClick={() => navigator('/signup')}
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-[14px] text-center text-base font-medium text-white shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color"
                 >
                   Get Started Today

@@ -55,7 +55,7 @@ export default function ContactSection() {
                       How Can We Help?
                     </h5>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      hello@headhuntrs.co.uk
+                      hello@InsightAI.co.uk
                     </p>
                   </div>
                 </div>

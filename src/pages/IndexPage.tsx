@@ -25,12 +25,12 @@ export default function IndexPage() {
       <PricingSection />
       {/* testimonials */}
       <FAQSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <ContactSection />
       <div className="fixed z-20 bottom-8 right-5">
       <Fab variant="extended" color="primary" onClick={() => setIsOpen(true)}>
         <NavigationIcon sx={{ mr: 1 }} />
-        Feed back
+        Submit feed back
       </Fab>
       </div>
       <Dialog

@@ -45,10 +45,10 @@ export default function FAQSection() {
                 FAQ
               </span>
               <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                Making the Most of Your Twin Tech Experience:
+                Making the Most of Your InsightAI Experience:
               </h2>
               <p className="mx-auto max-w-[485px] text-base text-body-color dark:text-dark-6">
-                Get tips on how to effectively use Twin Tech to enhance your
+                Get tips on how to effectively use InsightAI to enhance your
                 job-seeking or recruitment process.
               </p>
             </div>

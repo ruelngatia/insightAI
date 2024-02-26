@@ -66,9 +66,9 @@ export default function Terms() {
           <p>
             <a
               className="hover:underline text-primary"
-              href="www.twintechrecruit.com"
+              href="https://insightai.co.uk"
             >
-              www.twintechrecruit.com
+              insightai.co.uk
             </a>
             is a Website operated by InsightAI Limited ("we"). We are
             registered in England and Wales under company number 15398624 and
@@ -120,8 +120,8 @@ export default function Terms() {
             must not disclose it to any third-party. If you know or suspect that
             anyone other than you knows your user identification code or
             password, you must promptly notify us at{" "}
-            <a href="http://support@twintechrecruit.com">
-              support@twintechrecruit.com
+            <a href="http://hello@InsightAI.co.uk">
+              hello@InsightAI.co.uk
             </a>{" "}
             . We have the right to disable any user identification code or
             password, whether chosen by you or allocated by us, at any time, if
