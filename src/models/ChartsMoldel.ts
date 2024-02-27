@@ -5,4 +5,5 @@ export interface ChartsMoldel{
     positive_count: number;
     timestamps: Date[];
     total_reviews: number;
+    report: string;
 }
