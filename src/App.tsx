@@ -16,6 +16,7 @@ import { ToastContainer } from 'react-toastify';
 import Verication from "./pages/Verication";
 import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
+import CsvReport from "./pages/CsvReport";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/otp" element={<Verication/>}/>
           <Route path="/success" element={<Success/>}/>
           <Route path="/failure" element={<Cancel/>}/>
+          <Route path="/csvReport" element={<CsvReport/>}/>
           <Route path="*" element={<PageError/>}/>
         </Routes>
       <Footer/>

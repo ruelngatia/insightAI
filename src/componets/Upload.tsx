@@ -5,6 +5,7 @@ import { Button, CircularProgress } from "@mui/material";
 import { ReportService } from "../services/ReportService";
 import { toast } from "react-toastify";
 import UploadFileIcon from "@mui/icons-material/UploadFile";
+import { useNavigate } from "react-router-dom";
 
 interface UploadFlag {
   setIsopen: Function;
@@ -12,18 +13,16 @@ interface UploadFlag {
 
 export const Upload: React.FC<UploadFlag> = ({ setIsopen }): JSX.Element => {
   const fileTypes = ["CSV"];
+  const naviagator = useNavigate()
   const [file, setFile] = useState<any>(null);
   const [isLoading, setIsloading] = useState<boolean>(false);
 
   const handleChange = (file: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(file);
     setFile(file);
-
   };
 
   const upload = () => {
     setIsloading(true)
-    
     let formData = new FormData();
     formData.append("file", file);
     
@@ -31,6 +30,7 @@ export const Upload: React.FC<UploadFlag> = ({ setIsopen }): JSX.Element => {
       .upload(formData)
       .then((res) => {
         toast.success("File was uploaded Succesfully");
+        naviagator('/csvReport',{state: {report: res}})
         setIsopen(false);
       })
       .catch(() => toast.error("Some error occured"))
