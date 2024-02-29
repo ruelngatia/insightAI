@@ -20,14 +20,16 @@ import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { Upload } from "../componets/Upload";
 import CountUp from "react-countup";
+import { AxiosError } from "axios";
+import { toast } from "react-toastify";
 
 export default function Reports() {
   const [chartInfo, setChartInfo] = useState<ChartsMoldel>({
     average_rating: 0,
-    counts: [],
+    counts: [0],
     negative_count: 0,
     positive_count: 0,
-    timestamps: [],
+    timestamps: [new Date()],
     total_reviews: 0,
     report: "",
   });
@@ -35,7 +37,7 @@ export default function Reports() {
     reviews: [],
     name_list: [],
   });
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const navigator = useNavigate();
 
@@ -51,7 +53,15 @@ export default function Reports() {
           setReviews(res);
           setLoading(true);
         });
-      });
+      })
+      .catch((error: AxiosError) =>{
+        if(error.response?.status == 404){
+          toast.warn('No records were found')
+        }else{
+          toast.error("An error occured")
+        }
+      })
+      .finally(()=> setLoading(true))
   }, []);
 
   //generate random colors
@@ -94,7 +104,7 @@ export default function Reports() {
               Feedback Collected Over Time
             </h2>
             <BarChart
-              xAxis={[{ scaleType: "band", data: chartInfo.timestamps }]}
+              xAxis={[{ scaleType: "band", data: chartInfo.timestamps}]}
               series={[{ data: chartInfo.counts }]}
               width={700}
               height={350}
