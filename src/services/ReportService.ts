@@ -4,7 +4,7 @@ import { ReviewInterface } from "../models/ReviewInterface";
 import { Feedback } from "../models/Feedback";
 
 export class ReportService{
-    private baseURL = 'https://insightaiserver-z4ms.onrender.com'
+    private baseURL = 'https://insightai-backend-eetx.onrender.com/apidocs'
 
     
     public async getChartData(company: string): Promise<ChartsMoldel>{
