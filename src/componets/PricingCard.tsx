@@ -15,7 +15,7 @@ export const PricingCard: React.FC<PricingCardInterface> = ({
   
   const makePayment = ()=>{
     const auth = window.localStorage.getItem('auth')
-    if(auth==null) return navigator('/singin')
+    if(auth==null) return navigator('/signin')
     const user: LoginModel = JSON.parse(auth);
    
     new Auth().makePayment({ 
