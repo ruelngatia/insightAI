@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CTASection() {
+
+  const navigator = useNavigate();
+
   return (
     <section className="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
       <div className="container mx-auto">
@@ -20,7 +24,7 @@ export default function CTASection() {
                   business forward with data-driven decisions.{" "}
                 </p>
                 <a
-                  href="signup.html"
+                  onClick={() => navigator('/signup')}
                   className="inline-block rounded-md bg-white px-7 py-3 text-base font-medium text-black transition hover:bg-opacity-25 hover:bg-primary hover:shadow hover:shadow-white border hover:border-white"
                 >
                   Sign Up

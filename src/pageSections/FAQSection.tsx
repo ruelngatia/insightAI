@@ -12,7 +12,7 @@ export default function FAQSection() {
     {
       question: "How does InsightAI highlight key insights from customer feedback?",
       answer:
-        "Using advanced natural language processing, InsightAI identifies and emphasises crucial insights within your customer feedback, ensuring you're aware of important trends and sentiments",
+        "Using advanced natural language processing, InsightAI identifies and emphasises crucial insights within your customer feedback, ensuring you're aware of important trends and sentiments.",
     },
     {
       question: "What types of feedback analysis does InsightAI automate?",
@@ -21,7 +21,7 @@ export default function FAQSection() {
     },
     {
       question: "Can InsightAI simplify complex customer feedback for better understanding?",
-      answer: `Absolutely, InsightAI breaks down complex feedback into simpler terms, providing clear explanations to help you grasp the underlying customer opinions and needs`,
+      answer: `Absolutely, InsightAI breaks down complex feedback into simpler terms, providing clear explanations to help you grasp the underlying customer opinions and needs.`,
     },
     {
       question: "Will InsightAI notify me about emerging customer trends or issues?",
@@ -36,7 +36,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+    <section className="relative z-10 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">

@@ -1,8 +1,12 @@
 import React from "react";
 import about_Pic_1 from "../assets/about/about-image-01.png";
 import about_Pic_2 from "../assets/about/about-image-03.png";
+import { useNavigate } from "react-router-dom";
 
 export default function AboutSection() {
+
+  const navigator = useNavigate()
+
   return (
     <section
       id="about"
@@ -33,8 +37,8 @@ export default function AboutSection() {
                 </p>
 
                 <a
-                  href="signin.html"
-                  className="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark"
+                  onClick={() => navigator('/signUp')}
+                  className="cursor-pointer inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark"
                 >
                   Know More
                 </a>
