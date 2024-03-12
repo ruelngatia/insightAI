@@ -12,7 +12,7 @@ export default function HeroSection() {
   >
     <div className="container">
       <div>
-        <video autoPlay muted loop className="w-full h-full object-cover absolute top-0 left-0">
+        <video autoPlay muted style={{objectFit: 'initial'}} loop className="w-full h-full absolute top-0 left-0">
           <source src={vd} type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
