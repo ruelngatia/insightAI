@@ -150,7 +150,7 @@ export default function Footer() {
                     onClick={() => handleClickScroll("team")}
                     className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Team
+                    {/* Team */}
                   </a>
                 </li>
               </ul>
@@ -164,8 +164,8 @@ export default function Footer() {
               <ul>
                 <li>
                   <a
-                    href="#about"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    onClick={() => handleClickScroll('about')}
+                    className="cursor-pointer mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     How it works
                   </a>
